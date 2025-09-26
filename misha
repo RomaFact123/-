@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>С Днём Рождения, Миша Луговой!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to top right, #dfffd6, #fff8e7);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #7fc97f;
+      color: white;
+      padding: 30px;
+      font-size: 2em;
+    }
+    .content {
+      padding: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #7fc97f;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      animation: rise 8s infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-120vh); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    🎉 С Днём Рождения, Миша Луговой! 🎂
+  </header>
+
+  <div class="content">
+    <h2>О нашем имениннике</h2>
+    <p>Миша Луговой — добрый и жизнерадостный мышь, который живёт в зелёных полях и любит свежую травку. Сегодня мы отмечаем его день рождения!</p>
+
+    <h2>Интересные факты</h2>
+    <ul style="list-style:none;">
+      <li>🌱 Луговые мыши — отличные прыгунчики.</li>
+      <li>🐭 Они любят строить гнёзда из травы.</li>
+      <li>💚 Настоящие хранители луговой экосистемы.</li>
+    </ul>
+
+    <h2>Галерея</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Field_mouse.jpg" alt="Луговой мышь">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Apodemus_sylvaticus_field_mouse.jpg" alt="Мышь">
+    </div>
+  </div>
+
+  <footer>
+    С любовью и поздравлениями 💌 для Миши Лугового
+  </footer>
+
+  <script>
+    // Добавляем воздушные шарики 🎈
+    for (let i = 0; i < 10; i++) {
+      let balloon = document.createElement("img");
+      balloon.src = "https://upload.wikimedia.org/wikipedia/commons/3/3c/Red_balloon_icon.png";
+      balloon.className = "balloon";
+      balloon.style.left = Math.random() * 100 + "vw";
+      balloon.style.animationDuration = (5 + Math.random()*5) + "s";
+      document.body.appendChild(balloon);
+    }
+  </script>
+</body>
+</html>
